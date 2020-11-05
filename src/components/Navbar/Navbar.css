@@ -1,0 +1,217 @@
+@media only screen and (min-width: 600px) {
+    .container {
+      margin-left: 15vw;
+      margin-right: 15vw;
+      width: 70vw;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 599px) {
+    .container {
+      margin-left: 5vw;
+      margin-right: 5vw;
+      width: 90vw;
+    }
+  }
+  
+
+
+.navbar {
+
+    position: fixed;
+    width: 100vw;
+    height: var(--nav-height);
+    color: var(--nav-text);
+    background-color: var(--nav-background);
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Container to organize elements within */
+.navbar-container {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 40% 60%;
+
+}
+
+/* Continer for the navbar buttons */
+.navbar-dropdown-items {
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-items: center;
+    padding-top: 6px;
+
+
+}
+
+
+
+/* Contains icons to round their border */
+.icon-container {
+    /* background-color: var(--icon-background); */
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-right: 8px;
+}
+
+/* Changes brightness of icon button */
+.icon-container:hover {
+    filter: brightness(120%);
+    background-color: var(--icon-background);
+
+}
+
+
+
+.search-container {
+    overflow: hidden;
+    /* background-color: var(--nav-search-background); */
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: 0% 48px;
+    grid-template-rows: 100%;
+    justify-content: end;
+    align-content: center;
+    margin-right: 8px;
+    /* border: 2px solid blue */
+}
+
+.search-container.open {
+    display: grid;
+    align-content: end;
+    width: 20vw !important;
+    grid-template-columns: calc(18vw - 48px) 48px !important;
+
+}
+
+
+/* .open-search-container {
+    /* width: 20vw; */
+    /* border-radius: 8px;
+    margin-right: 0px;  */
+
+.search-icon-button {
+    position: relative;
+    display: flex;
+    grid-column-start: 2;
+    /* left: 6px; */
+    height: 48px;
+    align-self: center;
+    justify-self: center;
+    align-content: center;
+    justify-content: center;
+    width: 48px;
+    padding-left: 5%;
+}
+
+.search-icon-button.open {
+    /* right: -26px */
+
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+.search-input.open {
+    width: calc(18vw - 48px)!important;
+}
+
+
+.search-container:hover {
+    filter: brightness(120%);
+    background-color: var(--icon-background);
+
+}
+
+.search-input {
+    align-self:center;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    height: 32px;
+    color: var(--nav-text);
+}
+
+
+
+/* Each individual icon */
+.nav-icons {
+    align-self: center;
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    color: var(--nav-text);
+    font-size: 36px;
+}
+
+.icon-button {
+    height: 36px;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    width: 36px;
+}
+
+/* The title of the navbar */
+.navbar-title {
+    
+    align-self: center;
+
+}
+
+ @media only screen and (min-width: 750px) {
+
+    .navbar-title {
+    
+        font-size: 2.5rem;
+    
+    }
+
+}
+
+@media only screen and (max-width: 749px) {
+
+    .navbar-title {
+        font-size: calc(100vw * 0.05)
+    }
+
+} 
+
+
+/* Contains menu opened from navbar dropdown items */
+.navbar-menu {
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    right: 15%;
+    top: 60px;
+    border-radius: 4px;
+    color: var(--nav-text);
+    background-color: var(--nav-background);
+
+
+}
+
+.navbar-menu-title {
+
+    align-self: center;
+
+}
