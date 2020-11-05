@@ -1,11 +1,31 @@
 .Home {
-
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Merriweather', serif !important;
 }
 
-#rain-video {
+#background-video {
+    z-index: -1;
     position: fixed;
-    right: 0;
+    left: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+}
+
+.center {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+}
+
+.center .Button {
+    align-self: center;
+    justify-self: center;
+    width: 10rem;
+    height: 4rem;
 }

@@ -1,5 +1,10 @@
 import Navbar from "./Navbar/Navbar.js"
+import Button from "./Button.js"
 import "./css/Home.css"
+import bgVideo from "./../media/Forest.mp4"
+
+import { Link } from "react-router-dom"
+
 
 const Home = () => {
 
@@ -7,14 +12,21 @@ const Home = () => {
         return null;
     }
 
+    const enterStore = () => {
+
+    }
+
     return(
 
         <div className='Home'>
-            <Navbar title={ `Cabins` } searchCallAction={doNothing} />
+            <Navbar title={ `Forest Rain` } searchCallAction={doNothing} />
 
-            <video autoPlay='autoplay' muted loop='loop' id="rain-video">
-                <source src="./../media/Rain.mp4" type="video/mp4"/>
-            </video>
+            <div className='center'>
+                <Link to="/shop"><Button onClick={enterStore} title='Browse'/></Link>
+            </div>
+
+            <video src={bgVideo} autoPlay muted loop id="background-video"/>
+
         </div>
 
     );
