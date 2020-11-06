@@ -3,7 +3,7 @@ const ShoppingCart = () => {
     return(
 
         <div className='ShoppingCart'>
-
+        
         </div>
 
     );

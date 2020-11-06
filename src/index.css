@@ -6,16 +6,19 @@ body {
 }
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lato', sans-serif;
   /* overflow-x: hidden; */
 }
 
 :root {
-  --nav-height: 60px; 
-  --nav-text: #fffcf2;
-  --nav-background: #252422;
-  --nav-search-background: #403d39;
-  --icon-background: #403d39;
+  --nav-height: 62px; 
+  --light: #fefae0;
+  --dark: #283618;
+  --less-dark: #606c38;
+  --icon-background: #606c38;
+  --shop-background: #54442b;
+  --item-background: #a9714b;
+  --dark-text: #150F07;
 
   /* 
     white: fffcf2

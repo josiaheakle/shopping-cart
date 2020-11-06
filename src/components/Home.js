@@ -19,10 +19,10 @@ const Home = () => {
     return(
 
         <div className='Home'>
-            <Navbar title={ `Forest Rain` } searchCallAction={doNothing} />
+            <Navbar atHome={true} title={ `Wooded Homes` } searchCallAction={doNothing} />
 
             <div className='center'>
-                <Link to="/shop"><Button onClick={enterStore} title='Browse'/></Link>
+                <Link to="/shop"><Button title='Browse Homes'/></Link>
             </div>
 
             <video src={bgVideo} autoPlay muted loop id="background-video"/>

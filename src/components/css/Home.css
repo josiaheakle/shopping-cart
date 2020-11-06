@@ -2,7 +2,6 @@
     display: flex;
     width: 100vw;
     height: 100vh;
-    font-family: 'Merriweather', serif !important;
 }
 
 #background-video {
@@ -27,5 +26,6 @@
     align-self: center;
     justify-self: center;
     width: 10rem;
-    height: 4rem;
+    min-height: 4rem;
+    opacity: .9;
 }

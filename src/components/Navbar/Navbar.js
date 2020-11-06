@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 
 import "./Navbar.css"
 
@@ -11,6 +12,7 @@ export default class Navbar extends React.Component {
     // props
     // searchCallAction - parent function param : searchValue
     //            title - title of nav
+    //           atHome - bool : if home, dont render the home button
 
 
 
@@ -68,13 +70,17 @@ export default class Navbar extends React.Component {
 
     render() {
 
-        const { title, links } = this.props;
+        const { title, atHome } = this.props;
         return (
             <nav className='navbar'>
                 <div className='container navbar-container'>
-                    <span className='navbar-title'>{title}</span>
+                    <span className='navbar-title'>
+                        {(atHome === false) ? <NavbarIcon linkRoute='/' title='Home' materialIconName='home' /> : null }
+                        {title}
+                    </span>
                     <div className='navbar-dropdown-items'>
-                        <NavbarIcon title='Cart' materialIconName='shopping_cart' clickAction={this.setMenuOpen} closeAction={this.setMenuClosed}/>
+                        {/* clickAction={this.setMenuOpen} closeAction={this.setMenuClosed} */}
+                        <NavbarIcon linkRoute='/cart' title='Cart' materialIconName='shopping_cart' />
                         <NavbarSeach clickAction={ this.handleSearchClick } openSearchBar={this.state.openSearch} updateSearchValue={this.updateSearchValue}/>
                     </div>
                 </div>
