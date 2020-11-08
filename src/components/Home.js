@@ -6,7 +6,10 @@ import bgVideo from "./../media/Forest.mp4"
 import { Link } from "react-router-dom"
 
 
-const Home = () => {
+const Home = ( props ) => {
+
+    // props - 
+    //          cart
 
     const doNothing = () => {
         return null;
@@ -19,7 +22,7 @@ const Home = () => {
     return(
 
         <div className='Home'>
-            <Navbar atHome={true} title={ `Wooded Homes` } searchCallAction={doNothing} />
+            <Navbar atHome={true} title={ `Wooded Homes` } searchCallAction={doNothing} cartAmt={props.cart.length} />
 
             <div className='center'>
                 <Link to="/shop"><Button title='Browse Homes'/></Link>

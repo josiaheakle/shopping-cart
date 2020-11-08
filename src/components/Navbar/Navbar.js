@@ -13,6 +13,7 @@ export default class Navbar extends React.Component {
     // searchCallAction - parent function param : searchValue
     //            title - title of nav
     //           atHome - bool : if home, dont render the home button
+    //          cartAmt - amount of items in cart
 
 
 
@@ -80,8 +81,8 @@ export default class Navbar extends React.Component {
                     </span>
                     <div className='navbar-dropdown-items'>
                         {/* clickAction={this.setMenuOpen} closeAction={this.setMenuClosed} */}
-                        <NavbarIcon linkRoute='/cart' title='Cart' materialIconName='shopping_cart' />
-                        <NavbarSeach clickAction={ this.handleSearchClick } openSearchBar={this.state.openSearch} updateSearchValue={this.updateSearchValue}/>
+                        <NavbarIcon linkRoute='/cart' title='Cart' materialIconName='shopping_cart' cartAmt={this.props.cartAmt} />
+                        {/* <NavbarSeach clickAction={ this.handleSearchClick } openSearchBar={this.state.openSearch} updateSearchValue={this.updateSearchValue}/> */}
                     </div>
                 </div>
             </nav>

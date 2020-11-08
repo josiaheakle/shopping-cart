@@ -10,15 +10,35 @@ body {
   /* overflow-x: hidden; */
 }
 
+
+
 :root {
   --nav-height: 62px; 
-  --light: #fefae0;
+  /* --product-width: 50vw; */
+  /* --light: #fefae0;
   --dark: #283618;
   --less-dark: #606c38;
   --icon-background: #606c38;
   --shop-background: #54442b;
   --item-background: #a9714b;
-  --dark-text: #150F07;
+  --dark-text: #150F07; */
+
+
+
+  --dark-brown-trans: rgba(51, 24, 16, 0.9);
+  --dark-brown: #331810ff;
+  --black: #090907ff;
+  --pine-green: #2E3017ff;
+  --coffee: #775338ff;
+  --light-green: #333B16ff;
+
+  --light: #fefae0;
+  --dark: var(--pine-green);
+  --less-dark: var(--light-green);
+  --icon-background: #606c38;
+  --shop-background: #54442b;
+  --item-background:  var(--coffee);
+  --dark-text: var(--black);
 
   /* 
     white: fffcf2

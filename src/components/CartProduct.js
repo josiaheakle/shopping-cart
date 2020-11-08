@@ -1,15 +1,15 @@
 
-import "./css/Product.css"
 
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from "react"
 
-const Product = ( props ) => {
+const CartProduct = (props) => {
 
     // props - 
     //      title       - name of item
     //      imgSrc      - img source
     //      descr       - description of item
     //      price       - price in $
+    //      amount      - amount of items
     //      id          - unique item id
     //      clickAction - parent function call 
     //                    param: item id (same as item index)
@@ -31,18 +31,13 @@ const Product = ( props ) => {
         return formatter.format(props.price)
     }
 
-    const updateQuantity = () => {
-        const input = document.querySelector(`#quantity-${props.id}`)
-        setItemAmt(input.value)
-    }
-
     useEffect(() => {
         setPriceStr(formatPrice());
     }, [])
 
     return(
-        <div className='Product'id={props.id}> 
-            <div className='product-container'>
+        <div className='CartProduct' id={props.id}> 
+            <div className='cart-product-container'>
                 <div className='product-image-container'>
 
                     <img className='image' src={props.imgSrc}/>
@@ -58,7 +53,7 @@ const Product = ( props ) => {
             </div>
         </div>
     );
-
 }
 
-export default Product;
+
+export default CartProduct;

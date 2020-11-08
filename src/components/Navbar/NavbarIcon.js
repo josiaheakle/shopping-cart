@@ -8,6 +8,7 @@ export default class NavbarIcon extends React.Component {
     //      materialIconName
     //      clickAction
     //      linkRoute - string for router link
+    //      cartAmt
 
     constructor(props) {
         super(props)
@@ -21,8 +22,11 @@ export default class NavbarIcon extends React.Component {
         return( 
             
                 <span title={title} className='icon-container' onClick={clickAction}>
-                    <Link to={linkRoute} className='icon-button'><i className='material-icons-outlined nav-icons'>{materialIconName}</i>            </Link>
-
+                    <Link to={linkRoute} className='icon-button'>
+                        <i className='material-icons-outlined nav-icons'>{materialIconName}</i>
+                        <span className='cart-amount'> {this.props.cartAmt} </span>
+            
+                    </Link>
                 </span>
         );
     }

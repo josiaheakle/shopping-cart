@@ -1,4 +1,4 @@
-Button {
+.Button {
     border: 2px var(--dark) solid;
     outline:none;
     background-color: transparent;
@@ -10,7 +10,7 @@ Button {
 
 }
 
-Button:hover {
+.Button:hover {
     filter: brightness(0.8);
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);  
