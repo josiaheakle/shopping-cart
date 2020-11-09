@@ -1,4 +1,4 @@
-
+import "./css/CartProduct.css"
 
 import {useState, useEffect} from "react"
 
@@ -18,8 +18,7 @@ const CartProduct = (props) => {
     const [itemAmt, setItemAmt] = useState(0);
 
     const handleClick = () => {
-        console.log(`handling click for id ${props.id}`)
-        props.clickAction(props.id, itemAmt);
+        props.clickAction(props.id);
     }
 
     const formatPrice = () => {
@@ -39,7 +38,6 @@ const CartProduct = (props) => {
         <div className='CartProduct' id={props.id}> 
             <div className='cart-product-container'>
                 <div className='product-image-container'>
-
                     <img className='image' src={props.imgSrc}/>
                 </div>
                 <span className='title'>{props.title}</span>
@@ -47,8 +45,7 @@ const CartProduct = (props) => {
 
                 <span className='descr'>{props.descr}</span>
                 <span className='buy-container'>
-                    <button onClick={handleClick}>Add to Cart</button>
-                    <input onChange={updateQuantity} className='quantity' min='0' max='5' id={`quantity-${props.id}`} type='number' placeholder='0' />
+                    <button onClick={handleClick}>Remove</button>
                 </span>
             </div>
         </div>

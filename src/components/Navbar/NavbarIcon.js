@@ -21,10 +21,10 @@ export default class NavbarIcon extends React.Component {
         const { materialIconName, clickAction, title, linkRoute } = this.props;
         return( 
             
-                <span title={title} className='icon-container' onClick={clickAction}>
-                    <Link to={linkRoute} className='icon-button'>
+                <span title={title} className={`icon-container ${(materialIconName=== "home") ? 'home-icon' : ''}`} onClick={clickAction}>
+                    <Link to={linkRoute} className="icon-button">
                         <i className='material-icons-outlined nav-icons'>{materialIconName}</i>
-                        <span className='cart-amount'> {this.props.cartAmt} </span>
+                        {(this.props.cartAmt)? <span className='cart-amount'> {this.props.cartAmt} </span> :null}
             
                     </Link>
                 </span>

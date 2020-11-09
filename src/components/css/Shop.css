@@ -24,6 +24,7 @@
     backdrop-filter: blur(5px);  
     height: 100%;
     border-radius: 12px;
+    min-height: 100vh;
     /* padding-bottom: ; */
     /* display: flex;
     flex-direction: row; */

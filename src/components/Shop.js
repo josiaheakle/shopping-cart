@@ -24,13 +24,15 @@ const Shop = ( props ) => {
 
     // props -
     //      cart
-    //      updateCart - parent function call
+    //      updateCartProp - parent function call
     //                   param : new cart
 
     const [ itemList, setItemList ] = useState([]);
     const [ listDom, setListDom] = useState( <span/> );
-    const [ cartArray, setCart ] = useState([]);
+    const [ cartArray, setCart ] = useState(props.cart);
 
+
+    let index=0;
     const createItem = (title, imgSrc, descr, price) => {
 
         const item = {
@@ -38,6 +40,7 @@ const Shop = ( props ) => {
             imgSrc: imgSrc,
             descr: descr,
             price: price, // in cents
+            id: index++,
         }
 
         return item;
@@ -47,7 +50,6 @@ const Shop = ( props ) => {
 
 
     const createList = () => {
-        // console.log('creating list')
         setItemList([
             createItem('Mellow Homestead', cabin_01_img, 'Located in Northern Utah, this two story is packed with all amenenties needed for a comfortable and lavish live.', 250000),
             createItem("Lovers' Hideaway" , cabin_02_img, 'This secluded studio cabin is ferfect for a couples getaway,', 90000),
@@ -59,15 +61,9 @@ const Shop = ( props ) => {
         ])
     }
 
-
-    // const addToCart = (item) => {
-    //     setCart((prevCartArray) => [...prevCartArray, item]);
-    // }
-
     const addItemToCart = (id, amt) => {
         for(let i=0; i<itemList.length; i++) {
             if(i === id) {
-                console.log(`adding item now`)
                 const item = itemList[i];
                 for(let i=0;i<amt;i++) {
                     setCart((prevCartArray) => [...prevCartArray, item]);
@@ -78,11 +74,10 @@ const Shop = ( props ) => {
 
 
     const renderList = () => {
-        let index=0;
         setListDom(
             <div className='list'>
                 {itemList.map(item => {
-                    return(<Product id={index} key={index++} title={item.title} imgSrc={item.imgSrc} descr={item.descr} price={item.price} clickAction={addItemToCart} />);
+                    return(<Product id={item.id} key={item.id} title={item.title} imgSrc={item.imgSrc} descr={item.descr} price={item.price} clickAction={addItemToCart} />);
                 })}
             </div>
         );
@@ -95,7 +90,6 @@ const Shop = ( props ) => {
     }
 
     useEffect(() => {
-        // console.log('useEffectcalled')
         loadCart();
         createList()
     }, []);
@@ -106,7 +100,9 @@ const Shop = ( props ) => {
 
     useEffect(() => {
 
-        props.updateCart(cartArray)
+        console.log(`updated cart in shop`)
+        console.log(cartArray)
+        props.updateCartProp(cartArray)
 
     }, [cartArray])
 

@@ -82,7 +82,9 @@
 
 }
 
-
+.home-icon {
+    margin-top: 6px;
+}
 
 .search-container {
     overflow: hidden;
