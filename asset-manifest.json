@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.5b0272fa.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.4c967640.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.4c967640.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.2c057c56.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.2c057c56.js.map",
+    "static/js/2.238722c3.chunk.js": "/shopping-cart/static/js/2.238722c3.chunk.js",
+    "static/js/2.238722c3.chunk.js.map": "/shopping-cart/static/js/2.238722c3.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.5b0272fa.chunk.css.map": "/shopping-cart/static/css/main.5b0272fa.chunk.css.map",
+    "static/js/2.238722c3.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.238722c3.chunk.js.LICENSE.txt",
+    "static/media/Forest.3b9ffdd2.mp4": "/shopping-cart/static/media/Forest.3b9ffdd2.mp4",
+    "static/media/cabin_01.11406cac.jpg": "/shopping-cart/static/media/cabin_01.11406cac.jpg",
+    "static/media/cabin_02.4d508bec.jpg": "/shopping-cart/static/media/cabin_02.4d508bec.jpg",
+    "static/media/cabin_03.b8c8e33e.jpg": "/shopping-cart/static/media/cabin_03.b8c8e33e.jpg",
+    "static/media/cabin_04.38b6b499.jpg": "/shopping-cart/static/media/cabin_04.38b6b499.jpg",
+    "static/media/cabin_05.81483493.jpg": "/shopping-cart/static/media/cabin_05.81483493.jpg",
+    "static/media/cabin_06.941adbb7.jpg": "/shopping-cart/static/media/cabin_06.941adbb7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2c057c56.js",
+    "static/js/2.238722c3.chunk.js",
+    "static/css/main.5b0272fa.chunk.css",
+    "static/js/main.4c967640.chunk.js"
+  ]
+}
