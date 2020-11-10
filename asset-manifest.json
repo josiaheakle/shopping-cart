@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.5b0272fa.chunk.css",
+    "main.css": "/shopping-cart/static/css/main.c2209b9e.chunk.css",
     "main.js": "/shopping-cart/static/js/main.4db8470c.chunk.js",
     "main.js.map": "/shopping-cart/static/js/main.4db8470c.chunk.js.map",
     "runtime-main.js": "/shopping-cart/static/js/runtime-main.2c057c56.js",
@@ -8,7 +8,7 @@
     "static/js/2.238722c3.chunk.js": "/shopping-cart/static/js/2.238722c3.chunk.js",
     "static/js/2.238722c3.chunk.js.map": "/shopping-cart/static/js/2.238722c3.chunk.js.map",
     "index.html": "/shopping-cart/index.html",
-    "static/css/main.5b0272fa.chunk.css.map": "/shopping-cart/static/css/main.5b0272fa.chunk.css.map",
+    "static/css/main.c2209b9e.chunk.css.map": "/shopping-cart/static/css/main.c2209b9e.chunk.css.map",
     "static/js/2.238722c3.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.238722c3.chunk.js.LICENSE.txt",
     "static/media/Forest.3b9ffdd2.mp4": "/shopping-cart/static/media/Forest.3b9ffdd2.mp4",
     "static/media/cabin_01.11406cac.jpg": "/shopping-cart/static/media/cabin_01.11406cac.jpg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.2c057c56.js",
     "static/js/2.238722c3.chunk.js",
-    "static/css/main.5b0272fa.chunk.css",
+    "static/css/main.c2209b9e.chunk.css",
     "static/js/main.4db8470c.chunk.js"
   ]
 }
