@@ -38,6 +38,7 @@ const Product = ( props ) => {
 
     useEffect(() => {
         setPriceStr(formatPrice());
+        updateQuantity();
     }, [])
 
     return(
@@ -53,7 +54,7 @@ const Product = ( props ) => {
                 <span className='descr'>{props.descr}</span>
                 <span className='buy-container'>
                     <button onClick={handleClick}>Add to Cart</button>
-                    <input onChange={updateQuantity} className='quantity' min='0' max='5' id={`quantity-${props.id}`} type='number' placeholder='0' />
+                    <input onChange={updateQuantity} className='quantity' min='1' max='5' defaultValue={1} id={`quantity-${props.id}`} type='number' />
                 </span>
             </div>
         </div>

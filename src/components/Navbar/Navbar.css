@@ -32,7 +32,7 @@
     flex-direction: column;
 
     opacity: .9;
-
+    overflow-x: hidden;
 }
 
 /* Container to organize elements within */
@@ -190,6 +190,7 @@ a {
     align-self: center;
 
     align-items: center;
+    
 
 }
 
@@ -203,13 +204,19 @@ a {
 
 }
 
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 799px) and (min-width: 600px) {
 
     .navbar-title {
         font-size: calc(100vw * 0.04)
     }
 
 } 
+
+@media only screen and (max-width: 599px) {
+    .navbar-title {
+        font-size: 1.8rem;
+    }
+}
 
 
 /* Contains menu opened from navbar dropdown items */

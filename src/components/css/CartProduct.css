@@ -1,16 +1,17 @@
 @media only screen and (max-width: 750px){
     .CartProduct {
-        --cart-product-width: 35vw;
+        --cart-product-width: calc(var(--max-width)*.35);
     }
 }
   @media only screen and (min-width: 751px){
     .CartProduct {  
-        --cart-product-width: 25vw;
+        --cart-product-width: calc(var(--max-width)*.35);
     }
   }
 
 .CartProduct {
     
+    width: 95%;
     margin-bottom: 24px;
     display: flex;
     flex-direction: column;
@@ -23,12 +24,12 @@
     border-radius: 12px; */
 }
 
-@media only screen and (max-width: 650px) {
-    
-    .CartProduct {
-        width: 100%;
-    }
-
+/* @media only screen and (max-width: 650px) {
+    */
+    /* .CartProduct {
+        width: max-content;
+    } */
+/*
 }
 
 @media only screen and (min-width: 651px) {
@@ -37,7 +38,7 @@
         width: 80%;
     }
 
-}
+} */
 
 .cart-product-container {
 
@@ -47,7 +48,7 @@
     padding-bottom: 12px;
     border-radius: 12px;
     
-    width: var(--cart-product-width);
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-content: center;   
@@ -61,7 +62,7 @@
 
     align-content: center;   
 
-    max-width: var(--cart-product-width);
+    max-width: 100%;
     height: auto;
     justify-self: center;
     border-radius: 12px;
@@ -71,26 +72,27 @@
 
     text-align: center; 
 
-    font-size: 1.5rem;
-    width: var(--cart-product-width);
+    font-size: 1.2rem;
+    width: 100%;
 
 }
 
 .cart-product-container .descr {
+    
     text-align: center; 
 
-    padding-left: 10%;
-    padding-right: 10%;
+    /* padding-left: 10%;
+    padding-right: 10%; */
     font-size: 1.2rem;
-    width: 80%;
+    width: 100%;
 }
 
 .cart-product-container .price {
     text-align: center; 
 
 
-    font-size: 1.2rem;
-    width: var(--cart-product-width);
+    font-size: 1rem;
+    width: 100%;
 }
 
 .cart-product-container button {
@@ -105,7 +107,7 @@
     color: var(--light);
     border: 1px solid var(--black);
     outline:none;
-    background-color: var(--pine-green);
+    background-color: var(--red-button);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);  
     

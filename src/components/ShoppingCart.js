@@ -1,6 +1,7 @@
 // components
 import Navbar from "./Navbar/Navbar.js"
 import CartProduct from "./CartProduct.js"
+import Button from "./Button.js"
 
 // media
 import bgVideo from "../media/Forest.mp4"
@@ -11,12 +12,14 @@ import "./css/ShoppingCart.css"
 // react
 import { useState, useEffect } from "react"
 import React from 'react'
+import { Link } from "react-router-dom"
 
 const EmptyCartContainer = ( props ) => {
 
     return(
         <div className='empty-cart-container'>
-            <h1> Your cart is empty, check the shop! </h1>
+            <h1 className='empty-cart-text'> Your cart is empty. </h1>
+            <Link to="/shop"><Button title='Browse Homes'/></Link>
         </div> 
     );
 }
@@ -44,8 +47,16 @@ const ShoppingCart = ( props ) => {
     const removeFromCart = (id) => {
         console.log(`removing from cart`)
 
-
-        let newCart = cartArray.filter(item => item.id !== id);
+        let itemRemoved = false;
+        let newCart = cartArray.filter(item => {
+            let canRemove = true;
+            if(itemRemoved === true) {
+                canRemove = false;
+            }
+            if(item.id === id) 
+                itemRemoved = true;
+            return (item.id !== id || canRemove === false)
+        });
         updateCart(newCart)
 
 
@@ -59,6 +70,15 @@ const ShoppingCart = ( props ) => {
         //         break;
         //     }
         // }
+    }
+
+    const formatPrice = (price) => {
+        const formatter = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2
+        })
+        return formatter.format(price)
     }
 
     const updateCart = (newCart) => {
@@ -103,6 +123,7 @@ const ShoppingCart = ( props ) => {
     useEffect(() => {
         console.log(`cart has updated in shoping cart`)
         renderCart();
+        refreshTotal();
         props.updateCartProp(cartArray)
     }, [cartArray])
 
@@ -111,13 +132,19 @@ const ShoppingCart = ( props ) => {
         <div className='ShoppingCart'>
             <Navbar title='Cart' atHome={false} cartAmt={cartArray.length}  />
 
-            <div className='cart-container' >
-                {cartListDom}
+            <div className={`cart-container ${(cartTotal == 0)?'empty':'full'}`} >
+            {(cartTotal !== 0) ? (
                 <div className='checkout-container'>
-
-                </div>
+                    <span className='cart-total-container'>
+                        <span> Cart subtotal:</span> 
+                        <span id='cart-total'>{formatPrice(cartTotal)}</span>
+                    </span>
+                    <button > Proceed to Checkout </button>
+                </div>) : null}
 
                 {(cartArray.length<1)?<EmptyCartContainer/>:null}
+
+                {cartListDom}
 
             </div>
 

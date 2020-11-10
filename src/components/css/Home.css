@@ -20,12 +20,53 @@
     width: 100vw;
     justify-content: center;
     align-content: center;
+
+}
+
+@media only screen and (max-width: 649px) {
+    .center {
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width: 650px) {
+    .center {
+        flex-direction: column;
+    }
+}
+
+.home-text {
+    color: var(--light);
+    text-align: center;
+    padding-right: 24px;
+    font-weight: bolder;
 }
 
 .center .Button {
     align-self: center;
     justify-self: center;
     width: 10rem;
-    min-height: 4rem;
-    opacity: .9;
+    /* min-height: 4rem; */
+    /* opacity: .9; */
+}
+
+.button-link {
+    height: fit-content;
+    justify-self: center;
+    align-self: center;
+
+}
+
+#created-by {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);  
+    /* width: 100vw; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: var(--light)
+}
+
+#portfolio-link {
+    color: var(--light) !important;
+
 }
