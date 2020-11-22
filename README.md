@@ -1,17 +1,13 @@
 # Shopping cart
 ## Created by Josiah Eakle 
 
-This application - 
-    uses React 
-    is styled with no Frameworks
-
-Odin Project assignment -
-        Create a UI for a store
-        No checkout logic
-        Use react router
+This application
+    uses React, and
+    is styled with no Frameworks.
 
 
-
+This application is a mockup for a storefront. 
+There is no checkout logic and it uses react router to handle the url path.
 
 
 
